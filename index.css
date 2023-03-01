@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    overflow: hidden;
+}
+.app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: url(img/1.jpg) no-repeat center;
+    background-size: cover;
+    animation: zooms 2s ease-in-out 1 forwards;
+}
+.character{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+@keyframes zooms{
+    from{
+        transform: scale(1);
+        filter: blur(2rem);
+    }
+    to{
+        transform: scale(1.5);
+        filter: blur(0rem);
+    }
+}
+@media only screen and (min-width: 768px) 
+{
+    .character img{
+        width: 60%;
+    }
+}
